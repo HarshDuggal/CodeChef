@@ -1,0 +1,30 @@
+//ATM: Allow withdraw "x" amount (multiple of 5) from current balance "y" and detecting service charge 0.5. (Note: x and y are positive integer) Steps: Take input x and y from user, show balance as output.
+
+// Solution in c++
+
+#include <iostream>
+#include<iomanip>
+ 
+using namespace std;
+ 
+int main() {
+    int x;
+    double y;
+    cin >> x;
+    while(x<0) {
+        //cout << "enter number greater than zero";
+        cin >>x;
+    }
+    cin >> y;
+    while(y<0) {
+        //cout << "enter number greater than zero";
+        cin >> y;
+    }
+    if(x<=y-0.5 && x % 5 == 0){
+        cout << fixed << setprecision(2) << y-x-0.5;
+    }
+    else{
+        cout << fixed << setprecision(2) << y;
+   }
+    return 0;
+}
