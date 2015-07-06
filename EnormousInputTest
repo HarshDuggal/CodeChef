@@ -1,0 +1,47 @@
+
+
+#include <iostream>
+#include<iomanip>
+#include <math.h>
+
+using namespace std;
+
+
+int main() {
+    long x;
+    long y;
+//    cin >> x;
+    scanf("%ld",&x);
+    while(x<0 || x >10000000) {// number of inputs
+        //cout << "enter number greater than zero";
+//        cin >>x;
+        scanf("%ld",&x);
+    }
+    cin >> y;// divisor
+    while(y<0 || y >10000000) {
+        //cout << "enter number greater than zero";
+//        cin >> y;
+        scanf("%ld",&y);
+    }
+    int i = 0;
+    int totalPrefectDivisibleNumber = 0;
+    while (i<x) {
+        i++;
+        long z;
+//        cin >>z;
+        scanf("%ld",&z);
+
+        while(z<0 || z >1000000000) {
+            //cout << "enter number greater than zero";
+//            cin >> z;
+            scanf("%ld",&z);
+
+        }
+        if (z%y == 0) {
+            totalPrefectDivisibleNumber++;
+        }
+    }
+//    cout << totalPrefectDivisibleNumber;
+    printf("%d",totalPrefectDivisibleNumber);
+    return 0;
+}
